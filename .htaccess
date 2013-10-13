@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteBase /
+
+RewriteRule ^upload$ upload.php
+RewriteRule ^([A-Za-z0-9]+)\.png$ loadImage.php?id=$1
+RewriteRule ^permanent/([A-Za-z0-9]+)$ permanent.php?id=$1
