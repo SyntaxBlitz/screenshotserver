@@ -17,6 +17,7 @@ Plop these files into a directory, **which should be the root folder of either t
 
 Create two MySQL tables in a database, called 'temporaryImages' and 'storedImages' in my instance (though you can call them whatever you want and just modify the config).
 This is the table creation code:
+
     CREATE TABLE temporaryImages id INT NOT NULL AUTO_INCREMENT, singleByteName CHAR(1) NOT NULL, timestamp BIGINT
     CREATE TABLE storedImages id INT NOT NULL AUTO_INCREMENT, longName VARCHAR(16) NOT NULL, timestamp BIGINT
 
