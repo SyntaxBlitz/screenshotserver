@@ -45,7 +45,7 @@ if ( mysql_num_rows($Q_checkForOthersWithSameSingleByteName) > 0 ) {
 }
 
 mysql_query( "UPDATE temporaryImages SET singleByteName='" . $singleByteName . "', timestamp=" . $timeStamp . "   WHERE id=" . $id );
-$size = file_put_contents( 'temporaryImages/' . $singleByteName . '.png', base64_decode( $_POST['image'] ) );	// SECURITY WARNING! This just starts writing stuff to your disc. If PHP is configured to execute arbitrary code in the wrong format, you're opening yourself up to attacks. DO NOT FORGET that this entire system works without authentification, and is probably not something you should be using unchanged on a production server.
+$size = file_put_contents( 'temporaryImages/' . $singleByteName . '.png', base64_decode( $_POST['image'] ) );	// SECURITY WARNING! This just starts writing stuff to your disc. If PHP is configured to execute arbitrary code in the wrong format, you're opening yourself up to attacks. DO NOT FORGET that this entire system works without authentication, and is probably not something you should be using unchanged on a production server.
 // The greenshot plugin must be configured to upload as pngs, because we're saving the images as pngs and serving them with the png content type.
 
 // From here, we just form a response the way the actual imgur server would form one, which allows greenshot to figure out the image URL for copying it into the user's clipboard.
