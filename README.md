@@ -11,7 +11,7 @@ To make an image permanent, we navigate to /permanent/image_id, which will redir
 
 Installation
 ------------
-This needs to be installed on an operating system with case-sensitive filenames.
+This needs to be installed on an Apache server on an operating system with case-sensitive filenames. You can use another web server but will need to create the equivalent of the provided .htaccess.
 
 Plop these files into a directory, **which should be the root folder of either the domain or a subdomain**. You can modify this code to work inside a directory, of course, but it's not currently written to work like that.
 
